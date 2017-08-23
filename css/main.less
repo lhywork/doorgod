@@ -1,0 +1,119 @@
+
+@import "mbase";
+@bili:75rem;
+#wrapper{
+    width: 750/@bili;
+    margin: 0 auto;
+    -webkit-tap-highlight-color: transparent;
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+    font-family:"Helvetica Neue","Hiragino Sans GB W3","Hiragino Sans GB","Microsoft YaHei","WenQuanYi Micro Hei",sans-serif;
+    a{
+        display:block;
+    }
+    .mask{
+        width: 750/@bili;
+        height: 1334/@bili;
+        background: rgba(0,0,0,.6);
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 49;
+    }
+    .by-main{
+        position: relative;
+        width: 750/@bili;
+        height: 1334/@bili;
+        z-index: 50;
+        .ab{
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .open_gif,.disappear,.open_box{
+            width: 750/@bili;
+            height: 1334/@bili;
+        }
+        .cut_btn{
+            width: 400/@bili;
+            height: auto;
+            position: absolute;
+            bottom: 50/@bili;
+            left: 50%;
+            margin-left: -200/@bili;
+            display: none;
+            z-index: 53;
+        }
+        .x_btn{
+            width: 60/@bili;
+            height: auto;
+            position: absolute;
+            right: 30/@bili;
+            top: 30/@bili;
+            display: none;
+            z-index: 53;
+        }
+        .open_box{
+            z-index: 51;
+            background: url(http://gw.alicdn.com/mt/LB11VyKOVXXXXa0XXXXXXXXXXXX-11250-1334.png_q50.jpg_.webp) top center no-repeat;
+            background-size: 11250/@bili 1334/@bili;
+            background-position:0 0;
+            animation: open 1.5s steps(15) infinite;
+            -webkit-animation: open 1.5s steps(15) infinite;
+            animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+//             -webkit-transform:scale(2);
+        }
+        @keyframes open{
+          100% {
+            background-position:-11250/@bili 0;
+              
+          }
+        }
+        @-webkit-keyframes open{
+          100% {
+            background-position:-11250/@bili 0;
+          }
+        }
+        .open1{
+            z-index: 51;
+            background: url(http://gw.alicdn.com/mt/TB16omCOVXXXXXcXpXXXXXXXXXX-1500-1334.png_q50.jpg_.webp) top center no-repeat;
+            background-size: 1500/@bili 1334/@bili;
+            background-position:0 0;
+            animation: open1 .2s steps(2) infinite;
+            -webkit-animation: open1 .2s steps(2) infinite;
+        }
+        @keyframes open1{
+          100% {
+            background-position:-1500/@bili 0;
+          }
+        }
+        @-webkit-keyframes open1{
+          100% {
+            background-position:-1500/@bili 0;
+          }
+        }
+        .disappear{
+            background: url(../images/pic_02.png) top center no-repeat;
+            background-size: 3000/@bili 1334/@bili;
+            background-position:0 0;
+            animation: loading2 2s steps(4) 1;
+            -webkit-animation: loading2 2s steps(4) 1;
+            display: none;
+            z-index: 52;
+            animation-fill-mode: forwards;
+            -webkit-animation-fill-mode: forwards;
+        }
+        @keyframes loading2{
+          100% {
+            background-position:-3000/@bili 0;
+          }
+        }
+        @-webkit-keyframes loading2{
+          100% {
+            background-position:-3000/@bili 0;
+          }
+        }
+    }
+}
